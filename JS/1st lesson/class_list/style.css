@@ -1,0 +1,99 @@
+*,body   
+{
+   padding: 0;
+   margin: 0;
+}
+
+header
+{
+    background-color: rebeccapurple;
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+.container
+{
+    max-width: 1200px;
+    margin: auto;
+}
+nav
+{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav .logo
+{
+    font-size: 60px;
+}
+.menu
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 25px;
+}
+.menu .menu_link:hover
+{
+   color:black;
+}
+
+/* burger */
+
+.hamburger
+{
+  cursor: pointer;
+  display: none;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;   /*  o sa lucreze cu toate browserele*/
+
+}
+
+@media screen and (max-width: 1024px)
+{
+    .hamburger{
+        display: block;
+        margin-right: 30px;
+    }
+
+    .hamburger.active .bar:nth-child(2)
+    {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .menu {
+        font-size: 40px;
+        position: fixed;
+        top: 35%px;
+        /* left: -100%; */
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        transition: all 0.3s ease-in;
+    }
+    
+}

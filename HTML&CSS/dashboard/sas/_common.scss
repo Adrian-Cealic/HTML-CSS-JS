@@ -1,0 +1,212 @@
+body 
+{
+    margin: 0;
+   background-color: #e8e8e8; 
+}
+
+.ds-view
+{
+    display: flex;
+}
+
+.sidebar
+{
+    height: 100vh;
+    width: 55px;
+    overflow: hidden;
+    transition: width .5s ease-in-out;
+    background-color: #fff;
+
+    &.open
+    {
+        width: 300px;
+    }
+
+    .menu-extend
+    {
+        border-bottom: 1px solid #e8e8e8;
+        padding: 20px;
+        &:hover
+        {
+            cursor: pointer;
+        }
+    }
+
+    .list-group-item
+    {
+        padding: 15px 0;
+        border: none;
+        display: flex;
+        align-items: center;
+
+        i 
+        {
+            padding: 0 20px;
+            font-weight: 400px;
+
+        }
+    }
+}
+
+
+.ds-container
+{
+   width: calc(100% - 60px);
+   padding: 20px;
+}
+
+.users
+{
+    .user-item
+    {
+        border-radius: 50%;
+        overflow:hidden;
+        width: 50px;
+        height: 50px;
+
+        img 
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        i 
+        {
+            font-size: 50px;
+            line-height: 0;
+
+            &:hover
+            {
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.widget
+{
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.user-social-media-data
+{
+    padding: 20px;
+     
+    .user-info
+    {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+   .user-avatar
+   {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    img 
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   }
+   
+   .user-contact
+   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+
+   .user-name
+   {
+    font-size: 18px;
+    color: #000;
+   }
+   .user-country
+   {
+    font-size: 16px;
+    color: gray;
+   }
+
+   .progress-item
+   {
+    margin-top: 10px;
+    
+    
+     label
+     {
+        font-size: 14px;
+        font-weight: 500;
+     }
+     .progress 
+     {
+        height: 8px;
+        
+     }
+   }
+}
+
+.progress-type-red
+{
+    .progress-item
+    {
+        .progress-bar
+        {
+            background-color: red;
+        }
+    }
+}
+
+.progress-type-green
+{
+    .progress-item
+    {
+        .progress-bar
+        {
+            background-color: blue;
+        }
+    }
+}
+
+.progress-type-blue
+{
+    .progress-item
+    {
+        .progress-bar
+        {
+            background-color: green;
+        }
+    }
+}
+
+.progress-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px 10px 20px 25%;
+    background: 
+      radial-gradient(closest-side, pink 79%, transparent 0),
+      conic-gradient(hotpink 75%, pink 0);    
+  }
+.progress-circle::before
+ {
+    content: "75%";
+}
+
+.label-circle
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+  
+

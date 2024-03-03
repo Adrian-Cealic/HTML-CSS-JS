@@ -1,0 +1,71 @@
+.body
+{
+    margin: 0;
+}
+
+.d-flex
+{
+    display: flex;
+    border: 1px solid black;
+    width: calc(100% - 40px);
+    margin: 100px 20px;
+    justify-content: space-between;    
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.item
+{
+    background-color: teal;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 100%;
+    height: 200px;
+
+    /*alinierea textului la mijloc*/
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* small screen breakpoint */
+@media only screen and (min-width: 548px)
+{
+   .d-flex
+   {
+    width: 548px;
+    margin: 100px auto;
+   }
+   .item
+   {
+    width: calc(100% - 11px);
+   }
+}
+/* mediu screen breakpoint */
+@media only screen and (min-width: 768px)
+{
+    .d-flex
+    {
+        width: 768px;
+        margin: 100px auto;
+    }
+    .item
+    {
+     width: calc(33.3% - 11px);
+    }
+}
+/* large screen breakpoint */
+@media only screen and (min-width: 1200px)
+{
+    .d-flex
+    {
+        width: 1200px;
+        margin: 100px auto;
+    }
+    .item
+    {
+        width: calc(25% - 12px);
+    }
+}

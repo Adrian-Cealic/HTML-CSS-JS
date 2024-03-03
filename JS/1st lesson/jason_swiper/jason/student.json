@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "Ion",
+        "age" : 23,
+        "grades" : [10,5,9]
+    },
+    {
+       "name" : "Marina",
+       "age" : 21,
+       "grades" : [4,5,7]
+    }
+]

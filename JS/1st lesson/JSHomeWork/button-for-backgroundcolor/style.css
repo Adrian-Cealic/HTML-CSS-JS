@@ -1,0 +1,31 @@
+*,body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    width: 85%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+.button_container button{
+    padding: 3% 3%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    cursor: pointer;
+}
+h1
+{
+    font-size: 0.9rem;
+    margin: 10% 0;
+    color: #fff;
+}

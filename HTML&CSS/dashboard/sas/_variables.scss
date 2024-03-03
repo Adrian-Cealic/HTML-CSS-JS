@@ -1,0 +1,35 @@
+// Small screen
+@mixin for-sm
+{
+    @media screen and (min-width: 420px)
+    {
+        @content;
+    }
+}
+
+// middle screen
+@mixin for-md
+{
+    @media screen and (min-width: 768px)
+    {
+        @content;
+    }
+}
+
+// large screen
+@mixin for-lg
+{
+    @media screen and (min-width: 920px)
+    {
+        @content;
+    }
+}
+
+//  extra large screen
+@mixin for-xl
+{
+    @media screen and (min-width: 1200px)
+    {
+        @content;
+    }
+}

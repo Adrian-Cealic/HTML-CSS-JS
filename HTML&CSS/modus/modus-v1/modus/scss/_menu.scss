@@ -1,0 +1,31 @@
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.navigation-mobile {
+    .navigation-list {
+        padding-left: 50px;
+        list-style-type: none;
+    }
+
+    .menu-item {
+        width: 100%;
+        padding: 10px 0;
+
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $secondary-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

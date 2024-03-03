@@ -1,0 +1,42 @@
+// color variables
+$primary-color: #33d2fd;
+$secondary-color: #8d8d8d;
+$dark-color: #101012;
+
+// ----Responsive break points----
+
+// Small screen
+@mixin for-sm
+{
+    @media screen and (min-width: 420px)
+    {
+        @content;
+    }
+}
+
+// middle screen
+@mixin for-md
+{
+    @media screen and (min-width: 768px)
+    {
+        @content;
+    }
+}
+
+// large screen
+@mixin for-lg
+{
+    @media screen and (min-width: 920px)
+    {
+        @content;
+    }
+}
+
+//  extra large screen
+@mixin for-xl
+{
+    @media screen and (min-width: 1200px)
+    {
+        @content;
+    }
+}

@@ -1,0 +1,29 @@
+.tabel
+{
+    width: 11200px;
+    margin: 100px auto;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+thead,
+tbody tr td:nth-of-type(1)
+{
+    background-color: yellow;
+    color: black;
+}
+th,td
+{
+    padding: 10px 30px;
+}
+tbody tr:nth-child(odd)
+{
+    background-color: red;
+}
+tbody tr:nth-child(even)
+{
+    background-color: green;
+}
