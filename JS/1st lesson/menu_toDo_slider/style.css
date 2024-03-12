@@ -44,7 +44,7 @@
 
 /* -----To do-----*/
 
-body
+/* body
 {
     font-family:Arial, Helvetica, sans-serif;
     background-color: black;
@@ -142,7 +142,7 @@ select::after{
 select:hover::after{
     background: white;
     color: rgb(255, 200, 0);
-}
+} */
 
 
 /* .slider
