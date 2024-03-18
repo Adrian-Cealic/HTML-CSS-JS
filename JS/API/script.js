@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded",()=>
     const questionOutput = document.querySelector('.question');
     const answersOuptut = document.querySelector('.answers');
     const nextQuestionBtn = document.querySelector('.next-question');
+    let correctAnsw = 0;
+    let wrongAsnw = 0;
+    let prevQuestion = [];
 
 
 async function fetchApi()  //functia async permite folosirea await pentru a primit un promise intr-o variabila 
@@ -69,33 +72,45 @@ function checkAnswer(userAnswer,correctAnswer)
    if(userAnswer === correctAnswer)
    {
     alert('Maladet !');
-    displayNextQuestion();
-   }else{
+    correctAnsw++;
+}else{
     alert('Cartea in mana !');
-   }
-
-};
-
-async function displayNextQuestion()
-{
-    const data = await fetchApi();
-    if(data)
-    {
-        displayFetchedData(data);
-    }
-    else{
-        alert('smth went wrong');
-    }
-
+    wrongAsnw++;
 }
 displayNextQuestion();
 
-nextQuestionBtn.addEventListener('click',displayNextQuestion);
+};
+
+async function displayNextQuestion() {
+    const data = await fetchApi();
+    if (data) {
+
+        if (prevQuestion.includes(data.question)) {
+            displayNextQuestion(); 
+        } else {
+            prevQuestion.push(data.question);
+            displayFetchedData(data);
+        }
+    } else {
+        alert('Ceva nu a mers bine');
+    }
+}
+function endGame()
+{
+    alert(`Jocul s-a terminat\nRaspunsuri corecte : ${correctAnsw}\nRaspunsuri gresite ${wrongAsnw}`);
+}
+displayNextQuestion();
+nextQuestionBtn.addEventListener('click',()=>
+{
+   if(prevQuestion.length === 10)
+   {
+    endGame();
+   }
+   else{
+    displayNextQuestion();
+   }
 });
 
-//TODO: de scris codul pentru terminarea jocului(cate raspunsuri corecte\gresite),verificam daca intreabrea a fost si inlocuim cu alta
-
-
-
+});
 
 
