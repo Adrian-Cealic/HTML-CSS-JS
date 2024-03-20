@@ -1,4 +1,4 @@
-import cars from "../CarFilter/cars.json" assert {type: "json"};
+import cars from "./cars.json" assert {type: "json"};
 const carsListElement = document.getElementById("cars-list");
 const searchedCarsElement = document.getElementById("searched-cars");
 
@@ -11,7 +11,8 @@ function populateCarsList(carsArray, element) {
     });
 }
 
-
+let searchInput = document.querySelector('#search-input')
+searchInput.addEventListener('input',findCar);
 function findCar(text)
 {
     const carsArray = [];
@@ -39,8 +40,8 @@ function findCar(text)
     searchedCarsElement.style.display = found ? "block" : "none";
 
 };
-findCar("")
 populateCarsList(cars, carsListElement)
+findCar("")
 
 
 

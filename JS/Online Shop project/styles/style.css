@@ -160,3 +160,11 @@ nav{
     color: black;
     font-weight: bold;
 }
+.favourite-img{
+    cursor: pointer;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 40px;
+}
+
