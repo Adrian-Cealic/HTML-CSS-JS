@@ -1,47 +1,42 @@
 import cars from "./cars.json" assert {type: "json"};
+
 const carsListElement = document.getElementById("cars-list");
 const searchedCarsElement = document.getElementById("searched-cars");
-
-function populateCarsList(carsArray, element) {
-    element.innerHTML = "";
-    carsArray.forEach(car => {
-        const listElement = document.createElement("li");
-        listElement.textContent = car; 
-        element.appendChild(listElement);
-    });
-}
-
 let searchInput = document.querySelector('#search-input')
-searchInput.addEventListener('input',findCar);
-function findCar(text)
+
+// function populateCarsList(carsArray, element) {
+//     element.innerHTML = "";
+//     carsArray.forEach(car => {
+//         const listElement = document.createElement("li");
+//         listElement.textContent = car; 
+//         element.appendChild(listElement);
+//     });
+// }
+
+function findCar()
 {
-    const carsArray = [];
-    for(const car in cars)
-    {
-        carsArray.push(cars[car]);
-    }
+    const searchText = searchInput.value.trim().toLowerCase();
     searchedCarsElement.innerHTML = "";
     let found = false;
-    carsArray.forEach(car=>
+
+    cars.forEach(car=>
         {
-            if(car.toLowerCase().includes(text.toLowerCase))
+            if(JSON.stringify(car).toLowerCase().includes(searchText))
             {
-                const listElement = document.createElement("li");
+                const listElement = document.createElement("div");
+                listElement.classList.add("cards");
                 listElement.textContent = car;
                 searchedCarsElement.appendChild(listElement);
                 found = true;
-            }
-            else
-            {
-                 found = false;
             }
         }
     );
     searchedCarsElement.style.display = found ? "block" : "none";
 
 };
-populateCarsList(cars, carsListElement)
-findCar("")
+// populateCarsList(cars, carsListElement)
+// findCar("")
+searchInput.addEventListener('input',findCar);
 
 
 
