@@ -14,23 +14,23 @@
 //     }
 // })
 //----------------type to search---------------
-function filterProducts(text)
-{
-    const producutList = document.querySelector('product-list');
-    const products = document.querySelectorAll('.product');
-    products.forEach(product =>
-        {
-            if(product.textContent.toLocaleLowerCase().includes(text.toLocaleLowerCase()))
-            {
-                product.style.display = "block";
-            }
-            else
-            {
-                product.style.display = "none";
-            }
-        })    //pentru fiecare element gasit in array executa un callback
-}
-filterProducts("");
+// function filterProducts(text)
+// {
+//     const producutList = document.querySelector('product-list');
+//     const products = document.querySelectorAll('.product');
+//     products.forEach(product =>
+//         {
+//             if(product.textContent.toLocaleLowerCase().includes(text.toLocaleLowerCase()))
+//             {
+//                 product.style.display = "block";
+//             }
+//             else
+//             {
+//                 product.style.display = "none";
+//             }
+//         })    //pentru fiecare element gasit in array executa un callback
+// }
+// filterProducts("");
 
 //---------------TO DO-----------------
 // const taskInput = document.querySelector('#task-input');
@@ -59,35 +59,35 @@ filterProducts("");
 // }
 // document.querySelector('.add-btn').addEventListener('click',addTask);
 
-//---------SLIDER-------------
-// const slides = document.querySelectorAll('.slide');
-// const left = document.querySelector('.left');
-// const right = document.querySelector('.right');
+// ---------SLIDER-------------
+const slides = document.querySelectorAll('.slide');
+const left = document.querySelector('.left');
+const right = document.querySelector('.right');
 
-// let currentSliderIndex = 0;
-// function showSlide(index)
-// {
-//    slides.forEach((slide,i)=>
-//    {
-//     if(i === index)  // == dupa valorea , === dupa tipuri de date
-//     {
-//         slide.classList.add('active');
-//     }
-//     else
-//     {
-//         slide.classList.remove('active');
-//     }
-//    })
-// }
-// right.addEventListener('click',()=>
-// {
-//     currentSliderIndex = (currentSliderIndex - 1 + slides.length) % slides.length; //pentru a fi infinit
-//     showSlide(currentSliderIndex);
-// })
+let currentSliderIndex = 0;
+function showSlide(index)
+{
+   slides.forEach((slide,i)=>
+   {
+    if(i === index)  // == dupa valorea , === dupa tipuri de date
+    {
+        slide.classList.add('active');
+    }
+    else
+    {
+        slide.classList.remove('active');
+    }
+   })
+}
+right.addEventListener('click',()=>
+{
+    currentSliderIndex = (currentSliderIndex - 1 + slides.length) % slides.length; //pentru a fi infinit
+    showSlide(currentSliderIndex);
+})
 
-// left.addEventListener('click',()=>
-// {
-//     currentSliderIndex = (currentSliderIndex + 1) % slides.length; //pentru a fi infinit
-//     showSlide(currentSliderIndex);
-// })
-// showSlide(currentSliderIndex);
+left.addEventListener('click',()=>
+{
+    currentSliderIndex = (currentSliderIndex + 1) % slides.length; //pentru a fi infinit
+    showSlide(currentSliderIndex);
+})
+showSlide(currentSliderIndex);
